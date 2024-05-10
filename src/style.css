@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --RoseWhite: hsl(330, 100%, 98%);
+    --LightGrey: hsl(30, 18%, 87%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Nutmeg: hsl(14, 45%, 36%);
+    --DarkRaspberry: hsl(332, 51%, 32%);
+    --DarkCharcoal: hsl(24, 5%, 18%);
+    --espaco: 40px auto 15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body{
+    background: var(--Eggshell);
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+main{
+    width: 60%;
+    padding: 50px;
+    margin: 80px auto;
+    border-radius: 40px;
+    background: var(--White);
+}
+
+.image-omelette{
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: var(--espaco);
+}
+
+h1{
+    font-size: 3em;
+    color: var(--DarkCharcoal);
+}
+
+.titulo{
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: var(--espaco);
+}
+
+p{
+    margin-bottom: 30px;
+}
+
+.container-preparacao{
+    border-radius: 15px;
+    background:var(--RoseWhite);
+}
+
+.container-preparacao div{ 
+    margin: 60px 0 0 35px; 
+}
+
+h3{
+    color: var(--DarkRaspberry);
+}
+
+ul li span:nth-child(1){      
+    font-size: 1.5em;
+    margin: 0 20px 0 10px;
+    color: var(--Nutmeg);
+}
+
+ul li{
+    display: flex;
+    align-items: center;
+}
+
+.lista{
+    list-style-position: inside;
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista li::marker{
+    color: var(--Nutmeg);
+    font-weight: bold;
+}
+
+.linha{
+    border-top: 1px  solid var(--LightGrey)
+}
+
+h2{
+    font-size: 2em;
+    padding: 20px 0;
+    color: var(--Nutmeg);
+}
+
+ol{
+  counter-reset: list-counter; 
+}
+
+ol li{
+    display: flex;
+}
+
+ol li span:nth-child(1)::before{
+    content: counter(list-counter)"."; /* exibe o valor do contador */
+    counter-increment: list-counter; /* incrementa o contador */
+    font-weight: bold;
+    margin: 0 20px 0 10px;
+    color: var(--Nutmeg);  
+}
+
+.container-tabela{
+    width: 90%;
+}
+
+table{
+    max-width: 360px;
+    margin-left: 35px;
+}
+
+table td{ 
+    border-bottom: 1px solid var(--LightGrey);
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+table td:nth-child(2n){
+    color: var(--Nutmeg);
+}
+
+@media screen and (max-width:665px) {
+    :root{
+        --espaco: 25px auto 15px;
+    }
+    
+    main{
+        width: 100%;
+        padding: 0 0 50px;
+        margin: 0 0 50px 0;
+        border-radius: 0;
+    }
+
+    .image-omelette{
+        border-radius: 0;
+    }
+
+    .container-conteudo{
+        padding: 0 25px;
+    }
+
+    h1{
+        font-size: 38px;
+    }
+
+    table{
+        width: 70%;
+        margin: auto;
+    } 
+}
